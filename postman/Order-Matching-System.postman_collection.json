@@ -1,0 +1,86 @@
+{
+	"info": {
+		"_postman_id": "1b1144fb-ee59-4ca2-b6a0-8ecf006e3155",
+		"name": "Order-Matching-System",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26654639",
+		"_collection_link": "https://rootz-data-team.postman.co/workspace/rootz-data-team-Workspace~7e3f0490-dc6f-4a6f-8082-472560899fc6/collection/26654639-1b1144fb-ee59-4ca2-b6a0-8ecf006e3155?action=share&source=collection_link&creator=26654639"
+	},
+	"item": [
+		{
+			"name": "Create Order",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"stock\": {\n        \"id\": 1,\n        \"name\": \"Tesla\",\n        \"price\": 29\n    },\n    \"ordered_quantity\": 5,\n    \"action\": 1,\n    \"user_id\": \"my-user@test.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:80/order/create",
+					"host": [
+						"localhost"
+					],
+					"port": "80",
+					"path": [
+						"order",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Order Book",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:80/order/get_order_book/0",
+					"host": [
+						"localhost"
+					],
+					"port": "80",
+					"path": [
+						"order",
+						"get_order_book",
+						"0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Order System",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Match Order Books",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"url": {
+					"raw": "localhost:80/order/match_orders",
+					"host": [
+						"localhost"
+					],
+					"port": "80",
+					"path": [
+						"order",
+						"match_orders"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
