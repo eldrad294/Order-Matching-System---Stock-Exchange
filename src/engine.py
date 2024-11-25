@@ -1,10 +1,7 @@
-import math
-
 from sortedcontainers import SortedKeyList
 from enum import Enum
 from datetime import datetime
-import hashlib
-
+import hashlib, math
 
 class Stock:
     """
